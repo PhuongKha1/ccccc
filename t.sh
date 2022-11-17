@@ -77,7 +77,7 @@ read -p "Giới hạn tốc độ :" SpeedLimit
   echo "ip : ${CertDomain}"
  echo "-------------------------------"
 
- $config
+ config
   a=$((a+1))
   done
 }
