@@ -17,4 +17,5 @@ done
 case "${num}" in
 1) bash <(curl -Ls https://raw.githubusercontent.com/qtai2901/XrayR-release/main/install.sh)
 	mayweb
-
+ ;;
+    esac
