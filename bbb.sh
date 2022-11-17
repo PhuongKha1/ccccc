@@ -8,16 +8,16 @@ read -p "  Vui lòng chọn một số và nhấn Enter (Enter theo mặc địn
 	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
 	 [ -z "${n}" ] && n="1"
 
-a=0
-# 	for ((i = 1; i <= $n; i++)); do
-#     hint="${operation[$i - 1]}"
-#     echo -e "${green}${i}${plain}) ${hint}"
-#   done
-	while [ $a -lt ${n} ]
-do
- $pre_install
-   a=$((a+1))
-done
+# a=0
+	for ((i = 1; i <= $n; i++)); do
+    $pre_install
+   
+  done
+# 	while [ $a -lt ${n} ]
+# do
+#  $pre_install
+#    a=$((a+1))
+# done
 }
 pre_install(){
 clear
