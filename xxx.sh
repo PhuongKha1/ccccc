@@ -10,7 +10,7 @@ read -p "  Vui lòng chọn một số và nhấn Enter (Enter theo mặc địn
 
 # a=0
 	for ((i = 1; i <= $n; i++)); do
-    $pre_install
+    pre_install
    
   done
 # 	while [ $a -lt ${n} ]
@@ -20,7 +20,9 @@ read -p "  Vui lòng chọn một số và nhấn Enter (Enter theo mặc địn
 # done
 }
 pre_install(){
-clear
+ clear
+	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
+	 [ -z "${n}" ] && n="1"
 x=0
   while [$x -lt $ $n ]
   do
@@ -156,8 +158,7 @@ ConnetionConfig:
   BufferSize: 64 # The internal cache size of each connection, kB 
 Nodes:
 EOF
-
-	mayweb
+pre_install
  ;;
  2) mayweb
  ;;
