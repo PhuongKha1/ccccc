@@ -83,6 +83,7 @@ read -p "Giới hạn tốc độ :" SpeedLimit
 }
 
 config(){
+cd /etc/XrayR
 cat >>config.yml<EOF
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
