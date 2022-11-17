@@ -88,7 +88,7 @@ cat >>config.yml<<EOF
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "https://4ghatde.com"
+      ApiHost: "https://domain.com"
       ApiKey: "phamvanquoctai0209"
       NodeID: 41
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
@@ -128,7 +128,7 @@ cat >>config.yml<<EOF
           ALICLOUD_SECRET_KEY: bbb
 EOF
 
-  sed -i "s|ApiHost: \"https://4ghatde.com\"|ApiHost: \"${api_host}\"|" ./config.yml
+  sed -i "s|ApiHost: \"https://domain.com\"|ApiHost: \"${api_host}\"|" ./config.yml
  # sed -i "s|ApiKey:.*|ApiKey: \"${ApiKey}\"|" 
   sed -i "s|NodeID: 41|NodeID: ${node_id}|" ./config.yml
   sed -i "s|DeviceLimit: 0|DeviceLimit: ${DeviceLimit}|" ./config.yml
