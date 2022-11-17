@@ -178,6 +178,6 @@ ConnetionConfig:
   BufferSize: 64 # The internal cache size of each connection, kB 
 Nodes:
 EOF 
- pre_install
+pre_install
  ;;
     esac
