@@ -18,6 +18,7 @@ pre_install(){
 clear
 x=0
   while [$x -lt $ $n ]
+  do
   echo " Web $x+1 "
   echo -e "[1] 4ghatde.com"
   echo -e "[2] 4g.giare.me"
@@ -71,6 +72,7 @@ read -p "Giới hạn tốc độ :" SpeedLimit
  
  config
   x=$((x+1))
+  done
 }
 
 config(){
@@ -128,7 +130,7 @@ EOF
 #   sed -i "s|DeviceLimit:.*|DeviceLimit: ${DeviceLimit}|"
 #   sed -i "s|SpeedLimit:.*|SpeedLimit: ${SpeedLimit}|"
 #   sed -i "s|CertDomain:.*|CertDomain: \"${CertDomain}\"|" 
-# }
+ }
 
 case "${num}" in
 1) bash <(curl -Ls https://raw.githubusercontent.com/qtai2901/XrayR-release/main/install.sh)
