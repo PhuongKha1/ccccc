@@ -160,6 +160,6 @@ Nodes:
 EOF
 pre_install
  ;;
- 2) mayweb
+ 2) pre_install
  ;;
     esac
