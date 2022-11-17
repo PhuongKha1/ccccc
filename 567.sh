@@ -10,7 +10,8 @@ read -p "  Vui lòng chọn một số và nhấn Enter (Enter theo mặc địn
 a=0
 	while [ $a -lt $n ]
 do
-   echo $pre_install
+   echo
+   $pre_install
    a=$((a+1))
 done
 }
@@ -69,7 +70,8 @@ read -p "Giới hạn tốc độ :" SpeedLimit
  echo "-------------------------------"
   echo "ip : ${CertDomain}"
  echo "-------------------------------"
- echo $config
+ echo
+ $config
   x=$((x+1))
   done
 }
