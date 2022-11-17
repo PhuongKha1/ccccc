@@ -95,8 +95,8 @@ cat >>config.yml<<EOF
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
       EnableXTLS: false # Enable XTLS for V2ray and Trojan
-      SpeedLimit: 1000 # Mbps, Local settings will replace remote settings, 0 means disable
-      DeviceLimit: 1 # Local settings will replace remote settings, 0 means disable
+      SpeedLimit: 0 # Mbps, Local settings will replace remote settings, 0 means disable
+      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
       RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file
     ControllerConfig:
       ListenIP: 0.0.0.0 # IP address you want to listen
@@ -127,17 +127,17 @@ cat >>config.yml<<EOF
           ALICLOUD_ACCESS_KEY: aaa
           ALICLOUD_SECRET_KEY: bbb
 EOF
-    sed -i 's/4ghatde.com/${api_host}/g' ./config.yml
-     sed -i 's/41/${node_id}/g' ./config.yml
-     sed -i 's/1/${DeviceLimit}/g' ./config.yml
-     sed -i 's/1000/${SpeedLimit}/g' ./config.yml
-     sed -i 's/node1.test.com/${CertDomain}/g' ./config.yml
-#    sed -i "s|ApiHost:.*|ApiHost: \"${api_host}\"|" 
-#  # sed -i "s|ApiKey:.*|ApiKey: \"${ApiKey}\"|" 
-#   sed -i "s|NodeID:.*|NodeID: ${node_id}|" 
-#   sed -i "s|DeviceLimit:.*|DeviceLimit: ${DeviceLimit}|"
-#   sed -i "s|SpeedLimit:.*|SpeedLimit: ${SpeedLimit}|"
-#   sed -i "s|CertDomain:.*|CertDomain: \"${CertDomain}\"|" 
+#     sed -i 's/4ghatde.com/${api_host}/g' ./config.yml
+#      sed -i 's/41/${node_id}/g' ./config.yml
+#      sed -i 's/1/${DeviceLimit}/g' ./config.yml
+#      sed -i 's/1000/${SpeedLimit}/g' ./config.yml
+#      sed -i 's/node1.test.com/${CertDomain}/g' ./config.yml
+   sed -i "s|ApiHost:\"https://4ghatde.com\"|ApiHost: \"${api_host}\"|" ./config.yml
+ # sed -i "s|ApiKey:.*|ApiKey: \"${ApiKey}\"|" 
+  sed -i "s|NodeID: 41|NodeID: ${node_id}|" ./config.yml
+  sed -i "s|DeviceLimit: 0|DeviceLimit: ${DeviceLimit}|" ./config.yml
+  sed -i "s|SpeedLimit: 0|SpeedLimit: ${SpeedLimit}|" ./config.yml
+  sed -i "s|CertDomain:\"node1.test.com\"|CertDomain: \"${CertDomain}\"|" ./config.yml
  }
 
 case "${num}" in
@@ -160,6 +160,7 @@ ConnetionConfig:
 Nodes:
 EOF
 pre_install
+xrayr start
  ;;
  2) cd /etc/XrayR
 cat >config.yml <<EOF
@@ -179,5 +180,6 @@ ConnetionConfig:
 Nodes:
 EOF
 pre_install
+xrayr restart
  ;;
 esac
