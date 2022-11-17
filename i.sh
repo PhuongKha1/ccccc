@@ -162,7 +162,7 @@ EOF
 pre_install
  ;;
  2) cd /etc/XrayR
-  cat >config.yml <<EOF
+cat >config.yml <<EOF
 Log:
   Level: none # Log level: none, error, warning, info, debug 
   AccessPath: # /etc/XrayR/access.Log
