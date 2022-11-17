@@ -26,20 +26,20 @@ pre_install(){
 a=0
   while [ $a -lt $n ]
  do
-  echo " Web ${a}+1 "
+  echo " Web $((a+1))"
   echo -e "[1] 4ghatde.com"
   echo -e "[2] 4g.giare.me"
   echo -e "[3] 4gsieure.net"
   echo -e "[4] thegioi4g.com"
    read -p "Web đang sử dụng:" api_host
   if [ "$api_host" == "1" ]; then
-    api_host="4ghatde.com"
+    api_host="https://4ghatde.com"
   elif [ "$api_host" == "2" ]; then
-    api_host="4g.giare.me"
+    api_host="https://4g.giare.me"
     elif [ "$api_host" == "3" ]; then
-    api_host="4gsieure.net"
+    api_host="https://4gsieure.net"
     elif [ "$api_host" == "4" ]; then
-    api_host="thegioi4g.com"
+    api_host="https://thegioi4g.com"
   else 
     api_host="4ghatde.com"
   fi
