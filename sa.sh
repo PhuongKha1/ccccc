@@ -177,7 +177,7 @@ ConnetionConfig:
   DownlinkOnly: 4 # Time limit when the connection is closed after the uplink is closed, Second
   BufferSize: 64 # The internal cache size of each connection, kB 
 Nodes:
-EOF 
+EOF
 pre_install
  ;;
 esac
