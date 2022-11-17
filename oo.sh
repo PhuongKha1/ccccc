@@ -24,9 +24,9 @@ pre_install(){
 	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
 	 [ -z "${n}" ] && n="1"
 a=0
-  while [ $a -lt ${n} ]
+  while [ $a -lt $n ]
  do
-  echo " Web $a+1 "
+  echo " Web ${a}+1 "
   echo -e "[1] 4ghatde.com"
   echo -e "[2] 4g.giare.me"
   echo -e "[3] 4gsieure.net"
@@ -78,7 +78,7 @@ read -p "Giới hạn tốc độ :" SpeedLimit
  echo "-------------------------------"
 
  $config
-  x=$((x+1))
+  a=$((a+1))
   done
 }
 
