@@ -23,10 +23,10 @@ pre_install(){
  clear
 	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
 	 [ -z "${n}" ] && n="1"
-x=0
-  while [ $x -lt $ $n ]
-  do
-  echo " Web $x+1 "
+a=0
+  while [ $a -lt ${n} ]
+ do
+  echo " Web $a+1 "
   echo -e "[1] 4ghatde.com"
   echo -e "[2] 4g.giare.me"
   echo -e "[3] 4gsieure.net"
