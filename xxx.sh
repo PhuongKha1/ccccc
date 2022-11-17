@@ -24,7 +24,7 @@ pre_install(){
 	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
 	 [ -z "${n}" ] && n="1"
 x=0
-  while [$x -lt $ $n ]
+  while [ $x -lt $ $n ]
   do
   echo " Web $x+1 "
   echo -e "[1] 4ghatde.com"
