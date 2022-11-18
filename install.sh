@@ -3,30 +3,15 @@ echo "   1. Cài đặt"
 echo "   2. update"
 read -p "  Vui lòng chọn một số và nhấn Enter (Enter theo mặc định Cài đặt)  " num
 [ -z "${num}" ] && num="1"
-	mayweb(){
-  clear
-	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
-	 [ -z "${n}" ] && n="1"
-
-# a=0
-	for ((i = 1; i <= $n; i++)); do
-    pre_install
-   
-  done
-# 	while [ $a -lt ${n} ]
-# do
-#  $pre_install
-#    a=$((a+1))
-# done
-}
+	
 pre_install(){
  clear
-	read -p " Nhập số web và nhấn Enter (Enter theo mặc định 1) " n
+	read -p "Nhập số web cần cài và nhấn Enter (Enter theo mặc định 1) " n
 	 [ -z "${n}" ] && n="1"
 a=0
   while [ $a -lt $n ]
  do
-  echo " Web $((a+1))"
+  echo " Web số $((a+1))"
   echo -e "[1] 4ghatde.com"
   echo -e "[2] 4g.giare.me"
   echo -e "[3] 4gsieure.net"
